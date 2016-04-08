@@ -1,0 +1,17 @@
+%h1
+  Tell us what is up
+%p
+= form_for [Chat.new] do |form|
+  .row
+    .span1
+      Title:
+    .span11
+      = form.text_field :title, size: '100x20', style: "width: 100%;"
+      
+  .row
+    .span1
+      Problem:
+    .span11
+      = form.text_area :content, size: '100x20', style: "width: 100%; height: 100px"
+  %br/
+  = form.submit 'Start Chat'

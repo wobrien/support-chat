@@ -13,7 +13,16 @@ class ChatsController < ApplicationController
   def show
   end
   
+  def create
+    @chat = Chat.create! chat_params
+    redirect_to chat_url(@chat)
+  end
+  
   private
+  
+  def chat_params
+    params.require(:chat).permit(:title, :content)
+  end
   
   def load_chat
     @chat = Chat.find(params[:id])

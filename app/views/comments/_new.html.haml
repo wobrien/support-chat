@@ -1,0 +1,5 @@
+%P
+= form_for [chat, Comment.new], remote: true do |form|
+  = form.text_area :content, size: '100x20', style: "width: 100%; height: 100px"
+  %br/
+  = form.submit 'Post comment'

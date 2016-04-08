@@ -1,0 +1,4 @@
+%section#comments{"data-channel" => "comments", "data-chat-id" => "#{chat.id}"}
+  = render partial: "team/comments/comment", collection: chat.comments
+- if !@chat.closed? && chat.assigned_to_id == @current_user.id
+  = render 'team/comments/new', chat: chat

@@ -1,0 +1,5 @@
+%P
+= form_for :email, url: email_chat_path(chat), method: :get do |form|
+  = form.text_field :email, size: '100x20', style: "width: 100%;", name: "email"
+  %br/
+  = form.submit 'email transcript'

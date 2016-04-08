@@ -1,0 +1,12 @@
+!!! 5
+%html
+  %head
+    = render 'layouts/head'
+  %body.login
+    .login-box.centered
+      / = render 'layouts/injixo/logo'
+      = yield
+    :javascript
+      $(document).ready(function() {
+        $.placeholder();
+      });

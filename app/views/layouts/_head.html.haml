@@ -1,0 +1,12 @@
+%meta{ charset: "utf-8" }
+%meta{ name: "viewport", content: "width=device-width, initial-scale=1.0" }
+%title= "Support " + (content_for?(:title) ? " | #{yield :title}" : '')
+= csrf_meta_tags
+= stylesheet_link_tag "application", media: "all"
+%link{ href: image_path("injixo/favicon.ico"), rel: "shortcut icon" }
+%link{ href: image_path("injixo/apple-touch-icon-144.png"), rel: "apple-touch-icon", size: "144x144" }
+%link{ href: image_path("injixo/apple-touch-icon-114.png"), rel: "apple-touch-icon", size: "114x114" }
+%link{ href: image_path("injixo/apple-touch-icon-72.png"), rel: "apple-touch-icon", size: "72x72" }
+%link{ href:image_path("injixo/apple-touch-icon-57.png"), rel: "apple-touch-icon" }
+= javascript_include_tag "application"
+= javascript_include_tag "jquery.html5support"

@@ -1,0 +1,11 @@
+.nav
+  %ul.nav.nav-pills
+    %li{class: active_tab(:chats, 'false')}
+      = link_to 'Open', team_chats_path(closed: false)
+    %li{class: active_tab(:chats, 'true')}
+      = link_to 'Closed',team_chats_path(closed: true)
+    %li{class: active_tab(:chats, nil)}
+      = link_to 'All', team_chats_path
+      
+    %li.pull-right
+      = link_to 'Logout', team_session_path, method: :delete

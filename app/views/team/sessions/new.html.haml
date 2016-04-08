@@ -1,0 +1,17 @@
+- content_for :title, 'Login'
+
+/ = render 'layouts/flash'
+
+%h1
+  = icon(:comments) 
+  Login
+.box
+  = form_tag team_session_path do
+    .field
+      = text_field_tag :username, nil, placeholder: 'username', class: 'input-block-level', autofocus: true
+    .field
+      = password_field_tag :password, nil, placeholder: 'password', class: 'input-block-level'
+    .actions
+      = submit_tag 'Login', class: 'btn btn-block'
+
+

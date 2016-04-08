@@ -1,0 +1,29 @@
+%ul#myTab.nav.nav-tabs
+  %li.active
+    %a{"data-toggle" => "tab", :href => "#my-chat"} My Chats
+  %li
+    %a{"data-toggle" => "tab", :href => "#other-chat"} Other Chats
+    
+#myTabContent.tab-content
+  #my-chat.tab-pane.fade.active.in
+    %table.table.table-bordered
+      %tbody
+        - @my_chats.each do |chat|
+          %tr
+            %td= link_to chat.title, team_chat_path(chat)
+            %td= chat.content
+            - if chat.assigned_to_id.nil?
+              %td= link_to 'Grab', grap_team_chat_path(chat), method: :patch
+            - else
+              %td= link_to 'View', team_chat_path(chat)
+  #other-chat.tab-pane.fade
+    %table.table.table-bordered
+      %tbody
+        - @other_chats.each do |chat|
+          %tr
+            %td= link_to chat.title, team_chat_path(chat)
+            %td= chat.content
+            - if  chat.assigned_to_id.nil?
+              %td= link_to 'Grab', grap_team_chat_path(chat), method: :patch
+            - else
+              %td= link_to 'View', team_chat_path(chat)

@@ -1,0 +1,93 @@
+body.login {
+  background-color: #fff;
+  margin: 40px auto;
+  text-align: center;
+  max-width: 940px;
+
+  h1 {
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .logo {
+    background-size: 180px 30px;
+    width: 180px;
+    height: 30px;
+    margin: 50px auto 40px auto;
+    text-indent: -9999px;
+    background-image: image-url('invision-wfm/invision-wfm-logo.svg');
+    .no-svg &.logo { background-image: image-url('invision-wfm/invision-wfm-logo.png'); }
+  }
+
+  p{
+    color: #666;
+    line-height: 17px;
+  }
+
+  a{
+    color: #AFAFAF;
+  }
+  a.btn{
+    color: #333333;
+  }
+
+  .box {
+    box-sizing: border-box;
+    max-width: 300px;
+    margin: 15px auto 7px auto;
+    padding: 25px;
+    background-color: #F9F9FB;
+    border: 1px solid #E8E8E8;
+
+    form {
+      margin: 0;
+      text-align: left;
+      input[type="email"], input[type="password"] {
+        margin-bottom: 15px;
+      }
+      .error input {
+        margin-bottom: 0px;
+      }
+      .help-inline {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .services{
+    margin-top: 75px;
+    .span12{
+      border-top:     1px solid #DBDBDB;
+      padding: 5px;
+      color: #AFAFAF;
+      .service-logo{
+        background-repeat: no-repeat;
+        background-position: center;
+        text-indent: -9999px;
+        &.injixo{
+          background-size: 91px 25px;
+          height: 25px;
+          margin: 16px 0px 8px 0px;
+          background-image: image-url('injixo/injixo-logo.svg');
+          .no-svg &.injixo { background-image: image-url('injixo/injixo-logo.png'); }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px){
+    max-width: 480px;
+    h1 {
+      font-size: 28px;
+    }
+    .services {
+      .span4{
+        border-bottom: none;
+      }
+      .span4:last-child{
+        border-bottom: 1px solid #DBDBDB;
+      }
+    }
+  }
+}

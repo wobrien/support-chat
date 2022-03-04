@@ -5,6 +5,7 @@ You must have redis installed and running on the default port:6379 (or configure
 ##### On Mac
 * `brew install redis`
 * 
+*
 
 ou must have mailcatcher installed and running on the default ports
 
